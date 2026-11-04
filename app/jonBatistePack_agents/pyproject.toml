@@ -1,0 +1,25 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "jonBatistePack_agents"
+version = "0.1.0"
+description = "Slate Seven Clarity Sprint (Jon Batiste) pack: one AgentCore runtime, six Strands agents"
+requires-python = ">=3.10"
+dependencies = [
+    "aws-opentelemetry-distro ~= 0.18.0",
+    "bedrock-agentcore >= 1.9.1",
+    "botocore[crt] >= 1.35.0",
+    "strands-agents >= 1.47.0",
+    "pydantic >= 2.0",
+    "requests >= 2.32",
+    "python-docx >= 1.1",
+    "python-pptx >= 1.0",
+    "openpyxl >= 3.1",
+    "pypdf >= 4.0",
+    "pillow >= 10.0",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["."]
